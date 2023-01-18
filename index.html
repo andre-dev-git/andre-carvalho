@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./includes/estilo.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/ea243476ba.js" crossorigin="anonymous"></script>
+    <title>André Carvalho</title>
+</head>
+
+<body onscroll="conjuntoAnimacoes()" onload="verificarDispositivo()">
+    <header id="header">
+        <img src="./imagens/logo.png">
+        <div id="container-opcoes-header" class="container-centralizado">
+            <div class="opcoes-header container-centralizado">
+                <a onclick="rolarTela()">
+                    <h3>Home</h3>
+                </a>
+            </div>
+            <div class="opcoes-header container-centralizado">
+                <a onclick="rolarTela('containerSobreMim')">
+                    <h3>Sobre mim</h3>
+                </a>
+            </div>
+            <div class="opcoes-header container-centralizado">
+                <a onclick="rolarTela('containerSkills')">
+                    <h3>Linguagens</h3>
+                </a>
+            </div>
+            <div class="opcoes-header container-centralizado">
+                <a onclick="rolarTela('containerCertificados')">
+                    <h3>Certificados</h3>
+                </a>
+            </div>
+            <div class="opcoes-header container-centralizado">
+                <a onclick="rolarTela('')">
+                    <h3>Contato</h3>
+                </a>
+            </div>
+        </div>
+        <div id="hamburguer-menu" onclick="abrirSidebar(true)">
+            <div class="hamburger" id="hamburger-11">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </div>
+        <div id="container-side-bar" class="container-centralizado">
+
+        </div>
+    </header>
+    <div id="side-bar-container" class="container-centralizado">
+        <h3>Home</h3>
+        <h3 onclick="rolarTela('containerSobreMim')">Sobre mim</h3>
+        <h3 onclick="rolarTela('containerSkills')">Linguagens</h3>
+        <h3 onclick="rolarTela('containerCertificados')">Certificados</h3>
+        <h3>Portfólio</h3>
+        <h3>Contato</h3>
+    </div>
+    <div id="container-skyrim" class="container-centralizado">
+        <img src="./imagens/skyrim-wallpaper.jpg">
+        <div id="titulo-principal">
+            <h1>André <br> Carvalho</h1>
+            <p>Desenvolvedor full stack júnior</p>
+        </div>
+    </div>
+    <div id="container-full-size-1">
+        <div id="sobre-mim-container" class="container-centralizado">
+            <h1>
+                Sobre mim
+            </h1>
+            <p>
+                Me chamo André Carvalho, tenho 20 anos, além do meu trabalho, programação também é o meu
+                hobby e atualmente atuo como programador PHP. <br>
+                Minha entrada na área ocorreu recentemente, em março de 2022, quando ganhei uma bolsa integral
+                pelo ProUni para cursar eng. da computação na PUCRS. Logo de cara me apaixonei pela programação,
+                a ideia de poder usar a minha lógica para construir sistemas e resolver problemas fez com que eu
+                entrasse de cabeça nos estudos, para buscar conhecimento em novas linguagens e acima de tudo, me
+                aprofundar nas que eu já conheço. <br>
+                Atualmente, estou buscando novos desafios e ainda mais conhecimento e experiência.
+            </p>
+        </div>
+    </div>
+    <div id="container-full-size-2" class="container-centralizado">
+        <img src="./imagens/wallpaper-skills.jpg" class="background-image-container">
+        <div id="sobre-mim-glass" class="container-centralizado">
+            <div class="linguagens-individuais container-centralizado">
+                <img src="./imagens/html-logo.png">
+                <h3>Intermediário</h3>
+            </div>
+            <div class="linguagens-individuais container-centralizado">
+                <img src="./imagens/css-logo.png">
+                <h3>Intermediário</h3>
+            </div>
+            <div class="linguagens-individuais container-centralizado">
+                <img src="./imagens/js-logo.png">
+                <h3>Iniciante</h3>
+            </div>
+            <div class="linguagens-individuais container-centralizado">
+                <img src="./imagens/php-logo.png" style="height: 100px; width: auto">
+                <h3>Iniciante</h3>
+            </div>
+            <div class="linguagens-individuais container-centralizado">
+                <img src="./imagens/sql-logo.png" style="height: 120px; width: auto">
+                <h3>Iniciante</h3>
+            </div>
+        </div>
+    </div>
+    <div id="container-full-size-3" class="container-centralizado" onmousemove="animacao3D(event)">
+        <div class="circulos-rotate" style="left: -10%; animation: circulo1 2s linear 0s infinite">
+
+        </div>
+        <div class="circulos-rotate" style="left: 0%; animation: circulo2 2s linear 0s infinite">
+
+        </div>
+        <div class="circulos-rotate" style="left: 10%; animation: circulo3 2s linear 0s infinite">
+
+        </div>
+        <div class="circulos-rotate" style="left: 20%; animation: circulo1 2s linear 0s infinite">
+
+        </div>
+        <div class="circulos-rotate" style="left: 30%; animation: circulo2 2s linear 0s infinite">
+
+        </div>
+        <div class="circulos-rotate" style="left: 40%; animation: circulo3 2s linear 0s infinite">
+
+        </div>
+        <div class="circulos-rotate" style="left: 50%; animation: circulo1 2s linear 0s infinite">
+
+        </div>
+        <div class="circulos-rotate" style="left: 60%; animation: circulo2 2s linear 0s infinite">
+
+        </div>
+        <div class="circulos-rotate" style="left: 70%; animation: circulo3 2s linear 0s infinite">
+
+        </div>
+        <div class="container-titulo-certificados container-centralizado">
+            <h1>Certificados</h1>
+        </div>
+        <div class="container-centralizado" style="justify-content: flex-start; overflow-x: auto; perspective: 100vw;">
+            <div class="container-certificados">
+                <img src="./imagens/certificado-1.jpg">
+            </div>
+            <div class="container-certificados">
+                <img src="./imagens/certificado-2.jpg">
+            </div>
+            <div class="container-certificados">
+                <img src="./imagens/certificado-3.jpg">
+            </div>
+            <div class="container-certificados">
+                <img src="./imagens/certificado-4.jpg">
+            </div>
+            <div class="container-certificados">
+                <img src="./imagens/certificado-5.jpg">
+            </div>
+            <div class="container-certificados">
+                <img src="./imagens/certificado-6.jpg">
+            </div>
+            <div class="container-certificados">
+                <img src="./imagens/certificado-7.jpg">
+            </div>
+        </div>
+    </div>
+    <div id="container-full-size-4" class="container-centralizado">
+        <div id="container-me" class="container-centralizado">
+            <img src="./imagens/eu.jpg">
+            <div class="centralizado col">
+                <div id="contact-me" class="container-centralizado col">
+                    <div class="container-centralizado">
+                        <i class="fa-brands fa-whatsapp fa-3x"></i>
+                        <a rel="stylesheet" href="https://wa.me/5551989996654" target="_blank">(51)989996654</a>
+                    </div>
+                    <div class="container-centralizado">
+                        <i class="fa-brands fa-linkedin-in fa-3x"></i>
+                        <a rel="stylesheet" href="https://www.linkedin.com/in/andré-carvalho-3826a920b/"
+                            target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="container-centralizado">
+                        <i class="fa-brands fa-github fa-3x"></i>
+                        <a rel="stylesheet" href="https://wa.me/5551989996654" target="_blank">GitHub</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function conjuntoAnimacoes() {
+
+        var posicaoheader = document.getElementById('header');
+        posicaoHeader = posicaoheader.getBoundingClientRect();
+        var opacitySidebar = -posicaoHeader.top;
+        opacitySidebar = opacitySidebar / 1.5;
+        document.getElementById('container-side-bar').style.opacity = opacitySidebar + '%';
+
+
+        var containerSobreMim = document.getElementById('container-full-size-1');
+        posicoesSobreMim = containerSobreMim.getBoundingClientRect();
+        if (posicoesSobreMim.top < 600 && posicoesSobreMim.top > -600) {
+            document.getElementById('sobre-mim-container').style.left = '0vw';
+            document.getElementById('sobre-mim-container').style.display = 'flex';
+        } else {
+            document.getElementById('sobre-mim-container').style.left = '-100vw';
+        }
+
+
+        var containerSkills = document.getElementById('container-full-size-2');
+        posicoesSkills = containerSkills.getBoundingClientRect();
+        if (posicoesSkills.top < 400 && posicoesSkills.top > -400) {
+            document.getElementById('sobre-mim-glass').classList.add("sobre-mim-glass-after");
+            $('.linguagens-individuais').css('transform', 'scale(1)');
+        } else {
+            document.getElementById('sobre-mim-glass').classList.remove("sobre-mim-glass-after");
+            $('.linguagens-individuais').css('transform', 'scale(0)');
+        }
+
+
+        var containerCertificados = document.getElementById('container-full-size-3');
+        posicoesCertificados = containerCertificados.getBoundingClientRect();
+        if (posicoesCertificados.top < 400 && posicoesCertificados.top > -400) {
+            $(".circulos-rotate").css("width", "600px");
+            $(".circulos-rotate").css("height", "600px");
+        } else {
+            $(".circulos-rotate").css("width", "100px");
+            $(".circulos-rotate").css("height", "100px");
+        }
+    }
+    function rolarTela(secao) {
+        switch (secao) {
+            case 'containerSobreMim':
+                var containerSobreMim = document.getElementById('container-full-size-1');
+                posicao = containerSobreMim.getBoundingClientRect();
+                $('html, body').animate({ scrollTop: posicao.top }, 'slow');
+                break;
+            case 'containerSkills':
+                var containerSkills = document.getElementById('container-full-size-2');
+                posicao = containerSkills.getBoundingClientRect();
+                $('html, body').animate({ scrollTop: posicao.top }, 'slow');
+                break;
+            case 'containerCertificados':
+                var containerCertificados = document.getElementById('container-full-size-3');
+                posicao = containerCertificados.getBoundingClientRect();
+                $('html, body').animate({ scrollTop: posicao.top }, 'slow');
+                break;
+        }
+    }
+    $(document).ready(function () {
+        $(".hamburger").click(function () {
+            $(this).toggleClass("is-active");
+        });
+    });
+    function abrirSidebar(acao) {
+        if (acao) {
+            $("#side-bar-container").css("left", "0vw");
+            $("#hamburguer-menu").attr("onclick", "abrirSidebar(false)");
+        } else {
+            $("#side-bar-container").css("left", "-100vw");
+            $("#hamburguer-menu").attr("onclick", "abrirSidebar(true)");
+        }
+    }
+    function animacao3D(mouse) {
+        var retangulo3D = document.getElementById("container-full-size-3");
+        informacoesDIV = retangulo3D.getBoundingClientRect();
+        var tamanho = document.getElementById("container-full-size-3");
+        tamanho = tamanho.getBoundingClientRect();
+        var y = rotacionar(informacoesDIV.width, tamanho.width, mouse.clientX);
+        var x = rotacionar(informacoesDIV.height, tamanho.height, mouse.clientY);
+        $(".container-certificados").css("transform", "rotateY(" + y + "deg) rotateX(" + -x + "deg)");
+    }
+    function rotacionar(tamanhoDIVFilha, tamanhoDIVPai, tamanhoDesejado) {
+
+        var auxiliar = tamanhoDIVPai - tamanhoDIVFilha;
+        auxiliar = auxiliar / 2;
+        tamanhoDesejado = tamanhoDesejado - auxiliar;
+        porcentagemX = regradeTres(tamanhoDIVFilha, tamanhoDesejado);
+        var inclinacao = (porcentagemX / 100) * 80;
+        return inclinacao = inclinacao - 40;
+    }
+    function regradeTres(tamanhoMaximo, tamanhoDesejado) {
+        var porcentagem = (100 * tamanhoDesejado) / tamanhoMaximo;
+        return porcentagem;
+    }
+    window.addEventListener('resize', function () {
+        verificarDispositivo();
+    });
+    function verificarDispositivo() {
+        var largura = window.innerWidth;
+        if (largura < 750) {
+            const containerFullSize3 = document.getElementById("container-full-size-3");
+            containerFullSize3.setAttribute("onmousemove", "");
+        } else {
+            document.getElementById("container-full-size-3").setAttribute("onmousemove", "animacao3D(event)");
+        }
+    }
+</script>
+
+</html>
