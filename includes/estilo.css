@@ -548,7 +548,6 @@ header img {
 
 #container-me {
     width: 800px;
-    height: 800px;
     max-width: 98vw;
     justify-content: space-between;
     flex-wrap: wrap;
