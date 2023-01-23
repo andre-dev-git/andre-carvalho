@@ -561,6 +561,7 @@ header img {
     box-shadow: 10px 10px 15px #5a5a5a,
         -10px -10px 15px #ffffff;
     transition: .3s;
+    margin: 15px;
 }
 
 #container-me img:hover {
@@ -659,7 +660,7 @@ header img {
     }
 
     #container-full-size-4 {
-        height: calc(100vh - 120px);
+        height: 100vh;
     }
 
     #container-skyrim img {
@@ -674,10 +675,6 @@ header img {
         font-size: 14px;
     }
 
-    .container-full-size-4-imagem {
-        max-height: calc(100vh - 120px);
-    }
-
     #container-me {
         justify-content: center;
     }
@@ -687,6 +684,10 @@ header img {
         max-width: 90vw;
         filter: none;
         transition: .3s;
+    }
+
+    #contact-me {
+        padding: 0%;
     }
 
 }
