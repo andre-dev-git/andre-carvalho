@@ -11,12 +11,12 @@
     <title>André Carvalho</title>
 </head>
 
-<body onscroll="conjuntoAnimacoes()" onload="verificarDispositivo()">
+<body onscroll="conjuntoAnimacoes()" onload="onLoadFunctions()">
     <header id="header">
         <img src="./imagens/logo.png">
         <div id="container-opcoes-header" class="container-centralizado">
             <div class="opcoes-header container-centralizado">
-                <a onclick="rolarTela()">
+                <a onclick="rolarTela('containerSobreMim')">
                     <h3>Home</h3>
                 </a>
             </div>
@@ -36,7 +36,7 @@
                 </a>
             </div>
             <div class="opcoes-header container-centralizado">
-                <a onclick="rolarTela('')">
+                <a onclick="rolarTela('containerContato')">
                     <h3>Contato</h3>
                 </a>
             </div>
@@ -53,12 +53,11 @@
         </div>
     </header>
     <div id="side-bar-container" class="container-centralizado">
-        <h3>Home</h3>
+        <h3 onclick="rolarTela('start')">Home</h3>
         <h3 onclick="rolarTela('containerSobreMim')">Sobre mim</h3>
         <h3 onclick="rolarTela('containerSkills')">Linguagens</h3>
         <h3 onclick="rolarTela('containerCertificados')">Certificados</h3>
-        <h3>Portfólio</h3>
-        <h3>Contato</h3>
+        <h3 onclick="rolarTela('containerContato')">Contato</h3>
     </div>
     <div id="container-skyrim" class="container-centralizado">
         <img src="./imagens/skyrim-wallpaper.jpg">
@@ -89,23 +88,23 @@
         <div id="sobre-mim-glass" class="container-centralizado">
             <div class="linguagens-individuais container-centralizado">
                 <img src="./imagens/html-logo.png">
-                <h3>Intermediário</h3>
+                <h3>HTML</h3>
             </div>
             <div class="linguagens-individuais container-centralizado">
                 <img src="./imagens/css-logo.png">
-                <h3>Intermediário</h3>
+                <h3>CSS</h3>
             </div>
             <div class="linguagens-individuais container-centralizado">
                 <img src="./imagens/js-logo.png">
-                <h3>Iniciante</h3>
+                <h3>Javascript</h3>
             </div>
             <div class="linguagens-individuais container-centralizado">
                 <img src="./imagens/php-logo.png" style="height: 100px; width: auto">
-                <h3>Iniciante</h3>
+                <h3>PHP</h3>
             </div>
             <div class="linguagens-individuais container-centralizado">
                 <img src="./imagens/sql-logo.png" style="height: 120px; width: auto">
-                <h3>Iniciante</h3>
+                <h3>MySQL</h3>
             </div>
         </div>
     </div>
@@ -162,25 +161,34 @@
             <div class="container-certificados">
                 <img src="./imagens/certificado-7.jpg">
             </div>
+            <div class="container-certificados">
+                <img src="./imagens/certificado-8.jpg">
+            </div>
+            <div class="container-certificados">
+                <img src="./imagens/certificado-9.jpg">
+            </div>
+            <div class="container-certificados">
+                <img src="./imagens/certificado-10.jpg">
+            </div>
         </div>
     </div>
     <div id="container-full-size-4" class="container-centralizado">
         <div id="container-me" class="container-centralizado">
-            <img src="./imagens/eu.jpg">
+            <a href="https://www.facebook.com/andre.bonifacio.771/" target="_blank"><img src="./imagens/eu.jpg"></a>
             <div class="centralizado col">
                 <div id="contact-me" class="container-centralizado col">
                     <div class="container-centralizado">
-                        <i class="fa-brands fa-whatsapp fa-3x"></i>
-                        <a rel="stylesheet" href="https://wa.me/5551989996654" target="_blank">(51)989996654</a>
+                        <a class="container-centralizado contato" href="https://wa.me/5551989996654" target="_blank"><i
+                                class="fa-brands fa-whatsapp fa-3x"></i>(51) 98999-6654</a>
                     </div>
                     <div class="container-centralizado">
-                        <i class="fa-brands fa-linkedin-in fa-3x"></i>
-                        <a rel="stylesheet" href="https://www.linkedin.com/in/andré-carvalho-3826a920b/"
-                            target="_blank">LinkedIn</a>
+                        <a class="container-centralizadore contato"
+                            href="https://www.linkedin.com/in/andré-carvalho-3826a920b/" target="_blank"> <i
+                                class="fa-brands fa-linkedin-in fa-3x"></i>LinkedIn</a>
                     </div>
                     <div class="container-centralizado">
-                        <i class="fa-brands fa-github fa-3x"></i>
-                        <a rel="stylesheet" href="https://wa.me/5551989996654" target="_blank">GitHub</a>
+                        <a class="container-centralizado contato" href="https://github.com/andre-dev-git"
+                            target="_blank"><i class="fa-brands fa-github fa-3x"></i>GitHub</a>
                     </div>
                 </div>
 
@@ -231,35 +239,41 @@
     }
     function rolarTela(secao) {
         switch (secao) {
+            case 'start':
+                var container = document.getElementById('container-skyrim');
+                break;
             case 'containerSobreMim':
-                var containerSobreMim = document.getElementById('container-full-size-1');
-                posicao = containerSobreMim.getBoundingClientRect();
-                $('html, body').animate({ scrollTop: posicao.top }, 'slow');
+                var container = document.getElementById('container-full-size-1');
                 break;
             case 'containerSkills':
-                var containerSkills = document.getElementById('container-full-size-2');
-                posicao = containerSkills.getBoundingClientRect();
-                $('html, body').animate({ scrollTop: posicao.top }, 'slow');
+                var container = document.getElementById('container-full-size-2');
                 break;
             case 'containerCertificados':
-                var containerCertificados = document.getElementById('container-full-size-3');
-                posicao = containerCertificados.getBoundingClientRect();
-                $('html, body').animate({ scrollTop: posicao.top }, 'slow');
+                var container = document.getElementById('container-full-size-3');
+                break;
+            case 'containerContato':
+                var container = document.getElementById('container-full-size-4');
                 break;
         }
+        const posicao = container.getBoundingClientRect();
+        const posicaoAtual = window.pageYOffset;
+        let posicaoTop = posicao.top;
+        if (verificarMobile()) {
+            abrirSidebar(false);
+            posicaoTop += -120;
+        }
+        $('html, body').animate({ scrollTop: posicaoTop + posicaoAtual }, 'slow');
     }
-    $(document).ready(function () {
-        $(".hamburger").click(function () {
-            $(this).toggleClass("is-active");
-        });
-    });
+
     function abrirSidebar(acao) {
         if (acao) {
             $("#side-bar-container").css("left", "0vw");
             $("#hamburguer-menu").attr("onclick", "abrirSidebar(false)");
+            $(".hamburger").toggleClass("is-active");
         } else {
             $("#side-bar-container").css("left", "-100vw");
             $("#hamburguer-menu").attr("onclick", "abrirSidebar(true)");
+            $(".hamburger").toggleClass("is-active");
         }
     }
     function animacao3D(mouse) {
@@ -285,16 +299,35 @@
         return porcentagem;
     }
     window.addEventListener('resize', function () {
-        verificarDispositivo();
+        verificarMobile();
     });
-    function verificarDispositivo() {
+    function verificarMobile() {
         var largura = window.innerWidth;
         if (largura < 750) {
             const containerFullSize3 = document.getElementById("container-full-size-3");
             containerFullSize3.setAttribute("onmousemove", "");
+            const containerCirculos = document.getElementById("container-full-size-3");
+            const circulos = containerCirculos.childNodes;
+            console.log(circulos);
+            for (i = 17; i > 5; i += -2) {
+                circulos[i].style.display = "none";
+            }
+            return true;
         } else {
             document.getElementById("container-full-size-3").setAttribute("onmousemove", "animacao3D(event)");
+            return false
         }
+    }
+    function onLoadFunctions() {
+        verificarMobile();
+        startarAnimacaoHome();
+    }
+    function startarAnimacaoHome() {
+        const home = document.getElementById("titulo-principal");
+        home.style.left = "0vw"
+        const titulo = home.childNodes;
+        titulo[1].style.animation = "titulo-principal 8s ease-out";
+        titulo[3].style.animation = "p-principal 1.7s ease-out";
     }
 </script>
 
