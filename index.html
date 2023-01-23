@@ -109,31 +109,13 @@
         </div>
     </div>
     <div id="container-full-size-3" class="container-centralizado" onmousemove="animacao3D(event)">
-        <div class="circulos-rotate" style="left: -10%; animation: circulo1 2s linear 0s infinite">
+        <div class="circulos-rotate" style="left: 0%; animation: circulo1 2s linear 0s infinite">
 
         </div>
-        <div class="circulos-rotate" style="left: 0%; animation: circulo2 2s linear 0s infinite">
+        <div class="circulos-rotate" style="left: 40%; animation: circulo2 2s linear 0s infinite">
 
         </div>
-        <div class="circulos-rotate" style="left: 10%; animation: circulo3 2s linear 0s infinite">
-
-        </div>
-        <div class="circulos-rotate" style="left: 20%; animation: circulo1 2s linear 0s infinite">
-
-        </div>
-        <div class="circulos-rotate" style="left: 30%; animation: circulo2 2s linear 0s infinite">
-
-        </div>
-        <div class="circulos-rotate" style="left: 40%; animation: circulo3 2s linear 0s infinite">
-
-        </div>
-        <div class="circulos-rotate" style="left: 50%; animation: circulo1 2s linear 0s infinite">
-
-        </div>
-        <div class="circulos-rotate" style="left: 60%; animation: circulo2 2s linear 0s infinite">
-
-        </div>
-        <div class="circulos-rotate" style="left: 70%; animation: circulo3 2s linear 0s infinite">
+        <div class="circulos-rotate" style="left: 80%; animation: circulo3 2s linear 0s infinite">
 
         </div>
         <div class="container-titulo-certificados container-centralizado">
@@ -306,12 +288,6 @@
         if (largura < 750) {
             const containerFullSize3 = document.getElementById("container-full-size-3");
             containerFullSize3.setAttribute("onmousemove", "");
-            const containerCirculos = document.getElementById("container-full-size-3");
-            const circulos = containerCirculos.childNodes;
-            console.log(circulos);
-            for (i = 17; i > 5; i += -2) {
-                circulos[i].style.display = "none";
-            }
             return true;
         } else {
             document.getElementById("container-full-size-3").setAttribute("onmousemove", "animacao3D(event)");
