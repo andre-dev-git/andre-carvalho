@@ -119,12 +119,20 @@ function verificarMobile() {
 }
 function onLoadFunctions() {
     verificarMobile();
-    startarAnimacaoHome();
+    setTimeout(startarAnimacaoHome, 1000 * 3);
 }
 function startarAnimacaoHome() {
+    const loading = document.getElementById("container-loading")
+    loading.remove()
+    const header = document.getElementById("header");
+    header.style.animation = "header-down 1.2s ease-out"
+    header.style.top = "0px"
     const home = document.getElementById("titulo-principal");
     home.style.left = "0vw"
     const titulo = home.childNodes;
     titulo[1].style.animation = "titulo-principal 8s ease-out";
     titulo[3].style.animation = "p-principal 1.7s ease-out";
+    const html = document.querySelector("html");
+    html.style.overflow = "auto";
+    console.log(html);
 }
