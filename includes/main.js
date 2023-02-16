@@ -53,7 +53,7 @@ function rolarTela(secao) {
             var container = document.getElementById('container-full-size-3');
             break;
         case 'containerContato':
-            var container = document.getElementById('container-full-size-4');
+            var container = document.getElementById('portfolio-cont');
             break;
     }
     const posicao = container.getBoundingClientRect();
@@ -134,5 +134,4 @@ function startarAnimacaoHome() {
     titulo[3].style.animation = "p-principal 1.7s ease-out";
     const html = document.querySelector("html");
     html.style.overflow = "auto";
-    console.log(html);
 }
