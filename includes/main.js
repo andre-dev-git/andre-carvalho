@@ -119,7 +119,7 @@ function verificarMobile() {
 }
 function onLoadFunctions() {
     verificarMobile();
-    setTimeout(startarAnimacaoHome, 1000 * 3);
+    setTimeout(startarAnimacaoHome, 1000 * 2);
 }
 function startarAnimacaoHome() {
     const loading = document.getElementById("container-loading")
