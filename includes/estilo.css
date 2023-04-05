@@ -156,7 +156,7 @@ header img {
     text-align: left;
     font-size: 10em;
     margin: 0px 40px 0px 130px;
-    background-image: url("../imagens/fundo-titulo.png");
+    background-image: url("../imagens/fundo-titulo.jpg");
     background-size: 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -168,7 +168,7 @@ header img {
     text-align: left;
     font-size: 2em;
     margin: 30px 40px 0px 130px;
-    background-image: url("../imagens/fundo-titulo.png");
+    background-image: url("../imagens/fundo-titulo.jpg");
     background-size: 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -510,6 +510,7 @@ header img {
     border-top: 3px solid #DCDCDC;
     transition: 1s;
     z-index: -10;
+    left: calc(50vw - 300px);
 }
 
 @keyframes circulo1 {
@@ -761,8 +762,8 @@ header img {
 }
 
 .spinner {
-    width: 440px;
-    height: 440px;
+    width: 140px;
+    height: 140px;
     animation: spinner-y0fdc1 2s infinite ease;
     transform-style: preserve-3d;
 }
